@@ -21,7 +21,7 @@ target 'Leiter' do
     pod 'ReactiveCocoa', '~> 10.0'
     pod 'SVProgressHUD', '~> 2.2.5'
     pod 'SGQRCode', '~> 3.0.0'
-
+    
     analytics_and_reporting_pods
 end
 
