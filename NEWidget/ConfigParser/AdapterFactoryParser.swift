@@ -20,7 +20,8 @@ struct AdapterFactoryParser {
             case .some("speed"):
                 factoryDict[id] = try parseSpeedAdapterFactory(adapterConfig, factoryDict: factoryDict)
             case .some("http"):
-                factoryDict[id] = try parseServerAdapterFactory(adapterConfig, type: HTTPAdapterFactory.self)
+                //some bug with origin code from author, now force using https
+                factoryDict[id] = try parseServerAdapterFactory(adapterConfig, type: SecureHTTPAdapterFactory.self)
             case .some("shttp"):
                 factoryDict[id] = try parseServerAdapterFactory(adapterConfig, type: SecureHTTPAdapterFactory.self)
             case .some("ss"):
